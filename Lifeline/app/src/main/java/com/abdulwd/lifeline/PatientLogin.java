@@ -147,9 +147,15 @@ public class PatientLogin extends AppCompatActivity {
     @OnClick(R.id.btn_verify_otp)
     public void verifyCode() {
         String code = mOTP.getText().toString();
-        PhoneAuthCredential credential =
-                PhoneAuthProvider.getCredential(phoneVerificationId, code);
-        signInWithPhoneAuthCredential(credential);
+        if (TextUtils.isEmpty(code)) {
+            mOTP.requestFocus();
+            mOTP.setError("Enter OTP");
+
+        } else {
+            PhoneAuthCredential credential =
+                    PhoneAuthProvider.getCredential(phoneVerificationId, code);
+            signInWithPhoneAuthCredential(credential);
+        }
     }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
