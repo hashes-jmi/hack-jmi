@@ -1,0 +1,17 @@
+
+Training data 
+Weight 
+150g 
+170g 
+140g 
+130g 
+Texture 
+Bumpy 
+Bumpy 
+Smooth 
+Smooth 
+Label 
+Orange 
+Orange 
+Apple 
+Appl 
