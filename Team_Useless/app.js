@@ -3,26 +3,12 @@ var socket=require('socket.io');
 var sentiment = require('sentiment');
 var firebase = require('firebase');
 
-var fireapp = firebase.initializeApp({ 
-apiKey: "AIzaSyCOmubrc3gEd6LOW5UfRH5LVaL-GFgRCgk",
-authDomain: "not-so-awesome-project-45a2e.firebaseapp.com",
-databaseURL: "https://not-so-awesome-project-45a2e.firebaseio.com",
-projectId: "not-so-awesome-project-45a2e",
-storageBucket: "not-so-awesome-project-45a2e.appspot.com",
-messagingSenderId: "481329884022"})
-var ref = fireapp.database().ref('/nlpScores')
 //App setup
 var port = process.env.PORT || 4000;
 var app=express();
 var server=app.listen(port,function(){
     console.log('listening to request on port 4000')
 });
-var allowCrossDomain = function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-next();
-}
 
 app.use(allowCrossDomain);
 // serve static files
