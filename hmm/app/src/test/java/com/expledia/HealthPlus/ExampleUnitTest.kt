@@ -1,4 +1,4 @@
-package com.expledia.hmm
+package com.expledia.HealthPlus
 
 import org.junit.Test
 

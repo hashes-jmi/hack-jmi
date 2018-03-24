@@ -1,18 +1,4 @@
-package com.expledia.hmm;
-
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.ArrayList;
-
-import io.apptik.widget.multiselectspinner.MultiSelectSpinner;
+package com.expledia.HealthPlus;
 
 /**
  * Created by shubhamg931 on 24/3/18.

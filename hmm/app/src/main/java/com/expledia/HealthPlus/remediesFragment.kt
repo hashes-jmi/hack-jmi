@@ -1,16 +1,12 @@
-package com.expledia.hmm
+package com.expledia.HealthPlus
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.ListAdapter
-import com.toptoche.searchablespinnerlibrary.SearchableSpinner
 import io.apptik.widget.multiselectspinner.BaseMultiSelectSpinner
 import kotlinx.android.synthetic.main.remedies_fragment.view.*
-import io.apptik.widget.multiselectspinner.MultiSelectSpinner
 import java.util.ArrayList
 
 

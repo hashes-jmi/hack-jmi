@@ -1,4 +1,4 @@
-package com.expledia.hmm
+package com.expledia.HealthPlus
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar

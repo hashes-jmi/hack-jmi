@@ -1,4 +1,4 @@
-package com.expledia.hmm
+package com.expledia.HealthPlus
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.expledia.hmm", appContext.packageName)
+        assertEquals("com.expledia.HealthPlus", appContext.packageName)
     }
 }
