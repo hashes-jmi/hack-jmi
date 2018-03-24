@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import com.expledia.HealthPlus.Services.VolleyCallBack
 import com.expledia.HealthPlus.Services.VolleyService
 import io.apptik.widget.multiselectspinner.BaseMultiSelectSpinner
 import kotlinx.android.synthetic.main.remedies_fragment.view.*
@@ -84,20 +85,44 @@ open class remediesFragment :android.support.v4.app.Fragment(),View.OnClickListe
     override fun onClick(v: View?)
     {
 //        VolleyService.getDisease(context,)
-//        var listOFInt=ArrayList<Int>()
-//        for (i in myBoolean)
-//        {
-//            if (i)
-//                listOFInt.add(1)
-//            else
-//                listOFInt.add(0)
-//        }
-//        Log.i("mytag",listOFInt.toString())
-        VolleyService.getDisease(context,ans)
+        var listOFInt=ArrayList<Int>()
+        for (i in myBoolean)
+        {
+            if (i)
+                listOFInt.add(1)
+            else
+                listOFInt.add(0)
+        }
+        Log.i("mytag",listOFInt.toString())
+        var getResultCallback=object:VolleyCallBack
+        {
+            override fun onSuccess(result: String)
+            {
+                Log.i("mytag","fragment me "+result.toString())
+                var args=Bundle()
+                args.putString("disease",result.toString())
+                var myblankFragment=blankFragment()
+                myblankFragment.arguments=args
+                replaceFragment(myblankFragment)
+
+
+            }
+        }
+        VolleyService.getDisease(context,listOFInt,getResultCallback)
         {requestResponse->
             Log.i("mytag",requestResponse.toString())
 
         }
     }
+
+
+    fun replaceFragment(someFragment: android.support.v4.app.Fragment)
+    {
+        val transaction = fragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_container, someFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
 
 }
