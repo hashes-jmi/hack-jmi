@@ -14,4 +14,6 @@
     <string name="previous_records">My records</string>
     <string name="aadhar">Patient</string>
     <string name="account">My Profile</string>
+    <string name="action_sign_in_short">Sign In</string>
+    <string name="otp">otp</string>
 </resources>
