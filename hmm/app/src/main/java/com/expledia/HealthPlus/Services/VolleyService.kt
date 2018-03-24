@@ -12,7 +12,7 @@ import org.json.JSONObject
  */
 object VolleyService
 {
-    fun getDisease(context: Context, diseases:ArrayList<Int>, complete: (Boolean) -> Unit)
+    fun getDisease(context: Context, diseases:ArrayList<Int>,callBack: VolleyCallBack, complete: (Boolean) -> Unit)
     {
 
         val jsonBody = JSONObject()
@@ -23,6 +23,7 @@ object VolleyService
         val registerRequest = object : StringRequest(Method.POST, "http://192.168.43.76:2345/fetch/", Response.Listener { response ->
             Log.i("mytag","response is "+response.toString())
             complete(true)
+            callBack.onSuccess(response.toString())
         }, Response.ErrorListener { error ->
             Log.i("mytag", "error is "+" $error")
             complete(false)
@@ -37,6 +38,7 @@ object VolleyService
             {
                 return requestBody.toByteArray()
             }
+
         }
         Volley.newRequestQueue(context).add(registerRequest)
     }

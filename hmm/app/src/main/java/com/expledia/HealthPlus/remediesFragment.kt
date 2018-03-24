@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import com.expledia.HealthPlus.Services.VolleyCallBack
 import com.expledia.HealthPlus.Services.VolleyService
 import io.apptik.widget.multiselectspinner.BaseMultiSelectSpinner
 import kotlinx.android.synthetic.main.remedies_fragment.view.*
@@ -93,7 +94,14 @@ open class remediesFragment :android.support.v4.app.Fragment(),View.OnClickListe
                 listOFInt.add(0)
         }
         Log.i("mytag",listOFInt.toString())
-        VolleyService.getDisease(context,listOFInt)
+        var getResultCallback=object:VolleyCallBack
+        {
+            override fun onSuccess(result: String)
+            {
+                Log.i("mytag","fragment me "+result.toString())
+            }
+        }
+        VolleyService.getDisease(context,listOFInt,getResultCallback)
         {requestResponse->
             Log.i("mytag",requestResponse.toString())
 
