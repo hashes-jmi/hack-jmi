@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "firebase": "^4.12.0",
+    "sentiment": "^4.2.0",
+    "socket.io": "^2.0.4"
+  }
 }
