@@ -84,16 +84,16 @@ open class remediesFragment :android.support.v4.app.Fragment(),View.OnClickListe
     override fun onClick(v: View?)
     {
 //        VolleyService.getDisease(context,)
-//        var listOFInt=ArrayList<Int>()
-//        for (i in myBoolean)
-//        {
-//            if (i)
-//                listOFInt.add(1)
-//            else
-//                listOFInt.add(0)
-//        }
-//        Log.i("mytag",listOFInt.toString())
-        VolleyService.getDisease(context,ans)
+        var listOFInt=ArrayList<Int>()
+        for (i in myBoolean)
+        {
+            if (i)
+                listOFInt.add(1)
+            else
+                listOFInt.add(0)
+        }
+        Log.i("mytag",listOFInt.toString())
+        VolleyService.getDisease(context,listOFInt)
         {requestResponse->
             Log.i("mytag",requestResponse.toString())
 

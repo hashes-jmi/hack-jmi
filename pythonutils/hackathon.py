@@ -47,7 +47,8 @@ def returnAnswer():
 
     else:
         content=dict(content)
-        myList=content["symptoms"]
+        myList=content["symptoms"].strip("[").strip("]").split(",")
+        print(myList)
         ans=[random.choice([0,1])]
         for i in symptoms_list:
             if i in myList:
