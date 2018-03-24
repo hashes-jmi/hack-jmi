@@ -1,0 +1,127 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="com.abdulwd.lifeline.main.PatientFragment">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/patient_aadhar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/patient_aadhar_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_patient_s_aadhar_number"
+            android:imeOptions="actionGo"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/textColor" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/patient_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/patient_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/patient_background">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/patient_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:src="@drawable/patient"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Huzaifa Iftikhar"
+                app:layout_constraintStart_toEndOf="@id/patient_photo"
+                app:layout_constraintTop_toTopOf="@id/patient_photo" />
+
+            <TextView
+                android:id="@+id/patient_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B-103 Jamia Nagar, New Delhi"
+                app:layout_constraintStart_toStartOf="@id/patient_name"
+                app:layout_constraintTop_toBottomOf="@id/patient_name" />
+
+            <TextView
+                android:id="@+id/patient_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                app:layout_constraintStart_toStartOf="@id/patient_name"
+                app:layout_constraintTop_toBottomOf="@id/patient_address" />
+
+            <TextView
+                android:id="@+id/patient_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="31st March 1996"
+                app:layout_constraintStart_toStartOf="@id/patient_name"
+                app:layout_constraintTop_toBottomOf="@id/patient_gender" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toBottomOf="@id/patient_photo" />
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/add_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:paddingEnd="24dp"
+            android:paddingStart="36dp"
+            android:text="Add entry"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/patient_data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/patient_data" />
+
+        <TextView
+            android:id="@+id/health_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Health history"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_entry" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/health_history" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

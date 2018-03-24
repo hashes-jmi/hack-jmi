@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
             = item -> {
         switch (item.getItemId()) {
             case R.id.navigation_previous_records:
-
+                PatientFragment patientFragment = new PatientFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, patientFragment).commit();
                 return true;
             case R.id.navigation_aadhar:
 
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(findViewById(R.id.toolbar));
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        navigation.setSelectedItemId(R.id.navigation_aadhar);
+        PatientFragment patientFragment = new PatientFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, patientFragment).commit();
     }
 
 }

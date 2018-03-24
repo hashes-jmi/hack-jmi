@@ -14,4 +14,5 @@
     <string name="previous_records">My records</string>
     <string name="aadhar">Patient</string>
     <string name="account">My Profile</string>
+    <string name="enter_patient_s_aadhar_number">Enter patient\'s aadhar number</string>
 </resources>
