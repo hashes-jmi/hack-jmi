@@ -12,5 +12,18 @@
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></FrameLayout>
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:contentDescription="logoimage"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/download" />
+
+    </FrameLayout>
+
+
 </android.support.constraint.ConstraintLayout>
