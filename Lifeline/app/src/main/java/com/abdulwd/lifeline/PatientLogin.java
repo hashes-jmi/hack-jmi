@@ -167,8 +167,8 @@ public class PatientLogin extends AppCompatActivity {
                             Log.i(TAG, "code verified signIn successful");
                             firebaseUser = task.getResult().getUser();
                             Toast.makeText(PatientLogin.this, "code verified signIn successful", Toast.LENGTH_SHORT).show();
-                            /*Intent intent = new Intent(this,PatientDetails.class);
-                            startActivity(intent);*/
+                            Intent intent = new Intent(PatientLogin.this, PatientDetails.class);
+                            startActivity(intent);
                             finish();
                         } else {
                             Log.e(TAG, "code verification failed", task.getException());

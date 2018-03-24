@@ -12,14 +12,16 @@ public class MainActivity extends AppCompatActivity {
             = item -> {
         switch (item.getItemId()) {
             case R.id.navigation_previous_records:
+                RecordsFragment recordsFragment = new RecordsFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, recordsFragment).commit();
+                return true;
+            case R.id.navigation_aadhar:
                 PatientFragment patientFragment = new PatientFragment();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment, patientFragment).commit();
                 return true;
-            case R.id.navigation_aadhar:
-
-                return true;
             case R.id.navigation_account:
-
+                ProfileFragment profileFragment = new ProfileFragment();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, profileFragment).commit();
                 return true;
         }
         return false;
