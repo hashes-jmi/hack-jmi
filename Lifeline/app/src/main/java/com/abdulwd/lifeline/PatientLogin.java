@@ -7,18 +7,18 @@ import android.support.v7.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class LoginActivity extends AppCompatActivity {
+public class PatientLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_patient_login);
         ButterKnife.bind(this);
     }
 
     @OnClick(R.id.click_here)
-    public void changeLogin() {
-        Intent intent = new Intent(this, PatientLogin.class);
+    void changeLogin() {
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
         finish();
     }

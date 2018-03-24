@@ -4,8 +4,10 @@
     <string name="your_history_stays_with_us">Your history stays with us</string>
     <string name="doctor_login">Doctor Login</string>
     <string name="user_id">User Id</string>
+    <string name="hint_aadhaar">Aadhar Number</string>
     <string name="password">Password</string>
     <string name="login_patient">Not a doctor? </string>
+    <string name="login_doctor">Are you a doctor?</string>
     <string name="enter_12_digit_aadhar_number">Enter 12 digit aadhar number</string>
     <string name="click_here"><u>Click here</u></string>
 </resources>
