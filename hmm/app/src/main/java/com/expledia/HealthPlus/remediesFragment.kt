@@ -1,10 +1,12 @@
 package com.expledia.HealthPlus
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import com.expledia.HealthPlus.Services.VolleyService
 import io.apptik.widget.multiselectspinner.BaseMultiSelectSpinner
 import kotlinx.android.synthetic.main.remedies_fragment.view.*
 import java.util.ArrayList
@@ -13,12 +15,16 @@ import java.util.ArrayList
 /**
  * Created by shubhamg931 on 24/3/18.
  */
-open class remediesFragment :android.support.v4.app.Fragment()
+open class remediesFragment :android.support.v4.app.Fragment(),View.OnClickListener
 {
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    lateinit var myBoolean: ArrayList<Boolean>
+    lateinit var ans:ArrayList<String>
 
+    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View?
+    {
         var myView = View(context)
-        var ans=ArrayList<String>()
+        ans=ArrayList<String>()
+        myBoolean= ArrayList<Boolean>()
         myView = LayoutInflater.from(context).inflate(R.layout.remedies_fragment, container, false)
         var myAdapter:ArrayAdapter<String>
         val options = ArrayList<String>()
@@ -41,16 +47,21 @@ open class remediesFragment :android.support.v4.app.Fragment()
                 .setListener<BaseMultiSelectSpinner>(object : BaseMultiSelectSpinner.MultiSpinnerListener {
                     override fun onItemsSelected(selected: BooleanArray) {
                         ans.clear()
+                        myBoolean.clear()
+                        myBoolean.add(true)
                         for (i in selected.indices) {
                             if (selected[i] == true)
                             {
+                                myBoolean.add(selected[i])
                                 ans.add(options[i])
                                 myAdapter.notifyDataSetChanged()
                             }
 
                             if (selected[i] == false)
                                 try {
+                                    myBoolean.add(selected[i])
                                     ans.remove(options[i])
+                                    myAdapter.notifyDataSetChanged()
                                 } catch (ex: Exception) {
                                 }
                         }
@@ -64,7 +75,29 @@ open class remediesFragment :android.support.v4.app.Fragment()
 
 
 
+        myView.RequestButton.setOnClickListener(this)
+
+
         return myView!!
+    }
+
+    override fun onClick(v: View?)
+    {
+//        VolleyService.getDisease(context,)
+//        var listOFInt=ArrayList<Int>()
+//        for (i in myBoolean)
+//        {
+//            if (i)
+//                listOFInt.add(1)
+//            else
+//                listOFInt.add(0)
+//        }
+//        Log.i("mytag",listOFInt.toString())
+        VolleyService.getDisease(context,ans)
+        {requestResponse->
+            Log.i("mytag",requestResponse.toString())
+
+        }
     }
 
 }

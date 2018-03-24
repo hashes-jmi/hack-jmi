@@ -47,8 +47,9 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/multiselectSpinner"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
         android:text="Symptoms"
         android:textAlignment="center"
@@ -61,7 +62,17 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView5"
+        android:layout_below="@+id/RequestButton"
         android:layout_marginTop="22dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/RequestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView5"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_menu_send" />
 
 </RelativeLayout>

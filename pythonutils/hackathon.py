@@ -43,7 +43,7 @@ def returnAnswer():
     print(content)
     if content == None:
         returnResponse = {"status": "FAILED", "status_codes": ["INVALID_URLS"]}
-        return jsonify(returnResponse)
+        return str(jsonify(returnResponse))
 
     else:
         content=dict(content)
@@ -58,5 +58,5 @@ def returnAnswer():
 
         return str(clf.predict([myList])[0])
 
-# app.run(host="0.0.0.0", debug=True, port=2345)
+app.run(host="0.0.0.0", debug=True, port=2345)
 # "http://0.0.0.0:9233/3d9g9b6f/"
