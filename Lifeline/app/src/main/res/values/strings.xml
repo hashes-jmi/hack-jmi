@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lifeline</string>
+    <string name="lifeline">LifeLine</string>
+    <string name="your_history_stays_with_us">Your history stays with us</string>
+    <string name="doctor_login">Doctor Login</string>
+    <string name="user_id">User Id</string>
+    <string name="hint_aadhaar">Aadhar Number</string>
+    <string name="password">Password</string>
+    <string name="login_patient">Not a doctor? </string>
+    <string name="login_doctor">Are you a doctor?</string>
+    <string name="enter_12_digit_aadhar_number">Enter 12 digit aadhar number</string>
+    <string name="click_here"><u>Click here</u></string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="previous_records">My records</string>
+    <string name="aadhar">Patient</string>
+    <string name="account">My Profile</string>
+    <string name="action_sign_in_short">Sign In</string>
+    <string name="otp">otp</string>
+    <string name="enter_patient_s_aadhar_number">Enter patient\'s aadhar number</string>
+</resources>
