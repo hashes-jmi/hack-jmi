@@ -6,40 +6,6 @@
     android:focusableInTouchMode="true"
     tools:context="com.abdulwd.lifeline.main.PatientFragment">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="6dp"
-        app:popupTheme="@style/AppTheme.PopupOverlay">
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Dr. Sarah Khan"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/subtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pediatrician"
-                android:textColor="@android:color/white"
-                app:layout_constraintTop_toBottomOf="@id/title" />
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v7.widget.Toolbar>
-
-
     <android.support.constraint.ConstraintLayout
         android:id="@+id/patient_data"
         android:layout_width="match_parent"
@@ -95,20 +61,6 @@
             app:layout_constraintTop_toBottomOf="@id/patient_photo" />
     </android.support.constraint.ConstraintLayout>
 
-    <Button
-        android:id="@+id/add_entry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:paddingEnd="24dp"
-        android:paddingStart="36dp"
-        android:text="Add entry"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@id/patient_data"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/patient_data" />
-
     <TextView
         android:id="@+id/health_history"
         android:layout_width="wrap_content"
@@ -116,8 +68,9 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="Health history"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/add_entry" />
+        app:layout_constraintTop_toBottomOf="@id/patient_data" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

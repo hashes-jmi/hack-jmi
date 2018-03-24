@@ -19,7 +19,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.TimeLine
 
     private List<Record> data;
 
-    HistoryAdapter(List<Record> data) {
+    public HistoryAdapter(List<Record> data) {
         this.data = data;
     }
 

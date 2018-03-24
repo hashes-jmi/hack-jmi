@@ -27,7 +27,8 @@
             android:name=".main.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PatientDetails"></activity>
+        <activity
+            android:name=".PatientDetails"/>
     </application>
 
 </manifest>
