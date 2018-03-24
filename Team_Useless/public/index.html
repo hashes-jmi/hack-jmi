@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1976D2">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.js"></script>
+  <script src="https://download.affectiva.com/js/3.2/affdex.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  <title>Class Room</title>
+</head>
+
+<body class="default-primary-color">
+  <div class="maincontent">
+    <div class="container"></div>
+    <div id="chat-circle" class="btn btn-raised">
+      <div id="chat-overlay"></div>
+      <i class="material-icons">speaker_phone</i>
+    </div>
+
+
+    <div class="chat-box">
+      <div class="chat-box-header">
+        ChatBot
+        <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+      </div>
+      <div class="chat-box-body">
+        <div class="chat-box-overlay">
+        </div>
+        <div class="chat-logs">
+
+        </div>
+        <!--chat-log -->
+      </div>
+      <div class="chat-input">
+        <form>
+          <input type="text" id="chat-input" placeholder="Send a message..." />
+          <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+        </form>
+      </div>
+    </div>
+    <!-- Modal Trigger -->
+    <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Help us To Improve our Courses</h4>
+        <p>Allow us to process your data as a feedback for us. we So that we can make your user experience more engaging and
+          interactive.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" style="color:blue" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+    <div id="modal2" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>What Should Classifier Predicts ? orange OR Apple ?</h4>
+        <h5 style="color:rebeccapurple;" id="answer">Listening...</h5>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" style="color:blue" class="modal-action modal-close waves-effect waves-green btn-flat">skip</a>
+      </div>
+    </div>
+    <!-- <h4 class="text-center">KickassClassRoom</h4> -->
+
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+
+    <div class="row">
+      <div class="col s2 m3 l3">
+
+        <div class="card grey lighten-1">
+          <div class="card-content white-text">
+            <span class="card-title">Live Chat</span>
+            <div id="chat-window">
+              <div id="output"></div>
+              <div id="feedback"></div>
+            </div>
+            <input id="handle" type="text" placeholder="Handle" />
+            <input id="message" type="text" placeholder="Message" />
+          </div>
+          <div class="card-action">
+            <button id="send">Send</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col s4 m4 l7">
+        <div class="col s2 m2 l2">
+          <div id="player"></div>
+          <a class="waves-effect waves-light btn" id="notes">Notes</a>
+        </div>
+
+
+
+      </div>
+
+
+
+
+      <div id="affdex_elements"> </div>
+      <div class="row">
+        <div class="col s3 m3 l3"></div>
+        <div class="col s1">
+          <!-- <button id="rec">Speak</button> -->
+
+        </div>
+      </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+<script src="js/chat.js"></script>
+
+
+</html>
