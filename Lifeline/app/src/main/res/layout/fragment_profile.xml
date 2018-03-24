@@ -1,0 +1,97 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.abdulwd.lifeline.main.ProfileFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        app:civ_border_color="#454545"
+        app:civ_border_width="1dp"
+        android:src="@drawable/doctor"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintStart_toEndOf="@id/image"
+        android:textSize="20sp"
+        android:text="Dr. Sarah Khan"
+        android:textColor="#34495E"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toStartOf="@id/name"
+        android:text="Pediatrician \nAIIMS, New Delhi"/>
+
+    <TextView
+        android:id="@+id/education"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Education"
+        android:textSize="20sp"
+        android:textColor="#34495E"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/ed1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Masters in Doctor, Pediatrics \nAIIMS, New Delhi"
+        app:layout_constraintTop_toBottomOf="@id/education"
+        app:layout_constraintStart_toStartOf="@id/education"/>
+
+    <TextView
+        android:id="@+id/ed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="MBBS\nBHU, Varanasi"
+        app:layout_constraintTop_toBottomOf="@id/ed1"
+        app:layout_constraintStart_toStartOf="@id/ed1"/>
+
+    <TextView
+        android:id="@+id/pastexperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Past Experience"
+        android:textSize="20sp"
+        android:textColor="#34495E"
+        app:layout_constraintTop_toBottomOf="@id/ed2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/pe1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="SR, Pediatrics \n2012 - Present \nAIIMS, New Delhi"
+        app:layout_constraintTop_toBottomOf="@id/pastexperience"
+        app:layout_constraintStart_toStartOf="@id/pastexperience"/>
+
+    <TextView
+        android:id="@+id/pe2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="JR \n2009 - 2012 \nBHU, Varanasi"
+        app:layout_constraintTop_toBottomOf="@id/pe1"
+        app:layout_constraintStart_toStartOf="@id/pe1"/>
+
+</android.support.constraint.ConstraintLayout>
