@@ -5,7 +5,7 @@
     <string name="doctor_login">Doctor Login</string>
     <string name="user_id">User Id</string>
     <string name="password">Password</string>
-    <string name="login_patient">If not a doctor </string>
+    <string name="login_patient">Not a doctor? </string>
     <string name="enter_12_digit_aadhar_number">Enter 12 digit aadhar number</string>
-    <string name="click_here">click here</string>
+    <string name="click_here"><u>Click here</u></string>
 </resources>
