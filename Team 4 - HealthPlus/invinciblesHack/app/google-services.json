@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "54879194413",
+    "firebase_url": "https://invincibleshack.firebaseio.com",
+    "project_id": "invincibleshack",
+    "storage_bucket": "invincibleshack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54879194413:android:3c64ab5a30acb195",
+        "android_client_info": {
+          "package_name": "com.expledia.invincibles"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54879194413-9btc1vmamp54e4ukou967ee72dg69ecp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.expledia.invincibles",
+            "certificate_hash": "402c2954795905191ebc6ca39393541c675cb470"
+          }
+        },
+        {
+          "client_id": "54879194413-1lqf7tqresupjsiguefsuahupf25cij1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-sHZ5mIOrh-fvlEHdInq9L4aOHFEqnMw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54879194413-1lqf7tqresupjsiguefsuahupf25cij1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
