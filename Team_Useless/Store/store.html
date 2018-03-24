@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#212121" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <title>Educational store</title>
+
+  <style>
+  .zoom {
+    transition: transform .2s; /* Animation */
+}
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: center;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button1 {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: center;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+  </style>
+</head>
+
+
+<body style="background-color:rgba(0,0,0, 0.1)">
+    
+    <h1 style="color:#000000"><center>STORE</center></h1>
+    <h2 style="color:#000000"><center><mark>Avail The Products For The Coins You Earned !!</mark></center></h2>
+    
+    <div style="align-items: center;">
+    <h2 style="color:#000000;margin:0.5em">BOOKS</h2>
+    <div class="zoom" style="float:left;margin:0.5em;" onclick="pdf()">
+        <img src="book1.jpg" height="200" width="150">
+    </br>
+<button class="button"><span>Buy for 10 tokens </span></button>
+    </div>
+    <div class="zoom" style="float:left;margin:0.5em;" onclick="pdf()">
+        <img src="book2.jpg" height="200" width="150">
+    </br>
+        <button class="button"><span>Buy for 15 tokens</span></button>
+    </div>
+
+    <div class="zoom" style="float:left;margin:0.5em;">
+        <img src="book3.jpg" height="200" width="150" onclick="pdf()">
+      </br>
+        <button class="button"><span>Buy for 25 tokens</span></button>
+    </div>
+     <div class="zoom" style="float:left;margin:0.5em;">
+        <img src="book4.jpg" height="200" width="150" onclick="pdf()">
+      </br>
+        <button class="button"><span>Buy for 28 tokens</span></button>
+    </div>
+     <div class="zoom" style="float:left;margin:0.5em;">
+        <img src="book5.jpg" height="200" width="150" onclick="pdf()">
+      </br>
+        <button class="button"><span>Buy for 19 tokens</span></button>
+    </div>
+</div>
+    <div style="float: left;">
+    <h2 style="color:#000000;margin:0.5em">VIDEOS</h2>
+    <div class="zoom" style="float:left;margin:0.5em;" onclick="pdf()">
+        <img src="Video1.jpeg" height="200" width="250">
+        </br>
+        <button class="button1"><span>Buy for 40 tokens</span></button>
+    </div>
+
+    <div class="zoom" style="float:left;margin:0.5em;" onclick="pdf()">
+        <img src="Video2.jpg" height="200" width="250">
+        </br>
+        <button class="button1"><span>Buy for 34 tokens</span></button>
+    </div>
+
+    <div class="zoom" style="float:left;margin:0.5em;">
+        <img src="Video3.jpeg" height="200" width="250" onclick="pdf()">
+        </br>
+        <button class="button1"><span>Buy for 26 tokens</span></button>
+    </div>
+</div>
+</body>
+
