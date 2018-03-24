@@ -1,42 +1,122 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1976D2">
+  <title>Class Room</title>
+</head>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+<body class="default-primary-color">
+  <div class="maincontent">
+    <div class="container"></div>
+    <div id="chat-circle" class="btn btn-raised">
+      <div id="chat-overlay"></div>
+      <i class="material-icons">speaker_phone</i>
+    </div>
+
+
+    <div class="chat-box">
+      <div class="chat-box-header">
+        ChatBot
+        <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+      </div>
+      <div class="chat-box-body">
+        <div class="chat-box-overlay">
+        </div>
+        <div class="chat-logs">
+
+        </div>
+        <!--chat-log -->
+      </div>
+      <div class="chat-input">
+        <form>
+          <input type="text" id="chat-input" placeholder="Send a message..." />
+          <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+        </form>
+      </div>
+    </div>
+    <!-- Modal Trigger -->
+    <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Help us To Improve our Courses</h4>
+        <p>Allow us to process your data as a feedback for us. we So that we can make your user experience more engaging and
+          interactive.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" style="color:blue" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+    <div id="modal2" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>What Should Classifier Predicts ? orange OR Apple ?</h4>
+        <h5 style="color:rebeccapurple;" id="answer">Listening...</h5>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" style="color:blue" class="modal-action modal-close waves-effect waves-green btn-flat">skip</a>
+      </div>
+    </div>
+    <!-- <h4 class="text-center">KickassClassRoom</h4> -->
+
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+
+    <div class="row">
+      <div class="col s2 m3 l3">
+
+        <div class="card grey lighten-1">
+          <div class="card-content white-text">
+            <span class="card-title">Live Chat</span>
+            <div id="chat-window">
+              <div id="output"></div>
+              <div id="feedback"></div>
+            </div>
+            <input id="handle" type="text" placeholder="Handle" />
+            <input id="message" type="text" placeholder="Message" />
+          </div>
+          <div class="card-action">
+            <button id="send">Send</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col s4 m4 l7">
+        <div class="col s2 m2 l2">
+          <div id="player"></div>
+          <a class="waves-effect waves-light btn" id="notes">Notes</a>
+        </div>
+
+
+
+      </div>
+
+
+
+
+      <div id="affdex_elements"> </div>
+      <div class="row">
+        <div class="col s3 m3 l3"></div>
+        <div class="col s1">
+          <!-- <button id="rec">Speak</button> -->
+
+        </div>
+      </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+<script src="js/chat.js"></script>
+
+
 </html>
