@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "934739469291",
+    "firebase_url": "https://lifeline-bcaff.firebaseio.com",
+    "project_id": "lifeline-bcaff",
+    "storage_bucket": "lifeline-bcaff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934739469291:android:fc0327f757640741",
+        "android_client_info": {
+          "package_name": "com.abdulwd.lifeline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934739469291-f6fgiu0uses1vqhvqm0vdpaq135fpggt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr3q-AjJCCnS1RapCXxJHQl1TS51eObkY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
