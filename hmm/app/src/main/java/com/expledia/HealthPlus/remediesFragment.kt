@@ -99,6 +99,13 @@ open class remediesFragment :android.support.v4.app.Fragment(),View.OnClickListe
             override fun onSuccess(result: String)
             {
                 Log.i("mytag","fragment me "+result.toString())
+                var args=Bundle()
+                args.putString("disease",result.toString())
+                var myblankFragment=blankFragment()
+                myblankFragment.arguments=args
+                replaceFragment(myblankFragment)
+
+
             }
         }
         VolleyService.getDisease(context,listOFInt,getResultCallback)
@@ -107,5 +114,15 @@ open class remediesFragment :android.support.v4.app.Fragment(),View.OnClickListe
 
         }
     }
+
+
+    fun replaceFragment(someFragment: android.support.v4.app.Fragment)
+    {
+        val transaction = fragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_container, someFragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
 
 }
