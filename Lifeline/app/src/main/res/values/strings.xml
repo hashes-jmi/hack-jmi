@@ -10,4 +10,8 @@
     <string name="login_doctor">Are you a doctor?</string>
     <string name="enter_12_digit_aadhar_number">Enter 12 digit aadhar number</string>
     <string name="click_here"><u>Click here</u></string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="previous_records">My records</string>
+    <string name="aadhar">Patient</string>
+    <string name="account">My Profile</string>
 </resources>

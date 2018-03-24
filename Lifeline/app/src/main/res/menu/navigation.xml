@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_previous_records"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="@string/previous_records" />
+
+    <item
+        android:id="@+id/navigation_aadhar"
+        android:icon="@drawable/ic_local_hospital_black_24dp"
+        android:title="@string/aadhar" />
+
+    <item
+        android:id="@+id/navigation_account"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="@string/account" />
+
+</menu>

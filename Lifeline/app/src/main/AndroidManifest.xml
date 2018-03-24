@@ -19,9 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PatientLogin"
+        <activity
+            android:name=".PatientLogin"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name=".main.MainActivity"
+            android:label="@string/title_activity_main" />
     </application>
 
 </manifest>
