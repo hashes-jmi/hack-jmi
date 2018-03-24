@@ -5,7 +5,6 @@ var socket=io.connect('192.168.43.82:4000');
 var message=document.getElementById('message');
 var handle=document.getElementById('handle');
 var btn=document.getElementById('send');
-var output=document.getElementById('output');
 var feedback=document.getElementById('feedback');
 
 //emitting event

@@ -359,23 +359,6 @@ var detector = new affdex.CameraDetector(divRoot, width, height, faceMode);
 
 var player;
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    height: '600',
-    width: '1000',
-    videoId: 'cKxRvEZd3Mw',
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
-
-
-
-
-
-
 var engagement_arr = []
 var joyness_arr = []
 var keys = []
