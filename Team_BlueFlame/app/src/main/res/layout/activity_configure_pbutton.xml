@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+
+android:layout_height="match_parent"
+>
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_connection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/text_info1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" Press the bluetooth icon to start connection"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/btn_rms"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:contentDescription="RMS"
+                    android:onClick="on_rms_click"
+                    android:scaleType="fitCenter"
+
+                    android:src="@drawable/rms_normal" />
+
+                <ImageButton
+                    android:id="@+id/btn_enable_bluetooth"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="#00000000"
+                    android:src="@drawable/bluetooth_inactive"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:onClick="on_btn_enable_bt"
+
+                    android:layout_gravity="center"
+                    android:contentDescription="Bluetooth" />
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mobile_inactive"
+                    android:contentDescription="device" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/text_info2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:text="Press  the RMS Icon to pair with RMS device"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_syncView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+            <!--<TextView-->
+                <!--android:id="@+id/text_info3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="10dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="data available. Press the Sync Icon to upload to server"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--<ImageView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="150dp"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:scaleType="fitCenter"-->
+                    <!--android:src="@drawable/mobile_inactive"-->
+                    <!--android:contentDescription="device" />-->
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/btn_sync_server"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="#00000000"-->
+                    <!--android:src="@drawable/btsync_false"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:scaleType="fitCenter"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:onClick="on_bt_uploadToDBclick"-->
+                    <!--android:contentDescription="sync" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="150dp"-->
+                    <!--android:padding="5dp"-->
+                    <!--android:scaleType="fitCenter"-->
+                    <!--android:src="@drawable/cloud_active"-->
+                    <!--android:contentDescription="server" />-->
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/text_info4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_marginTop="-60dp"
+                android:text="no connection!"
+                android:textColor="@android:color/holo_red_dark"/>
+
+            <View
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#e0e0e0"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>
+
+
+
+</LinearLayout>
